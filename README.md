@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # KiTS-SAM-Adapter
 
 ## Prerequisites
@@ -9,7 +8,7 @@
 
 To get started, first please clone the repo
 ```
-git clone https://github.com/StevenMA616777/KiTS-SAM-Adapter.git
+git clone https://github.com/StevenMa616777/KiTS-SAM-Adapter.git
 ```
 Then, please run the following commands:
 ```
