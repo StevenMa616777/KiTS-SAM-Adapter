@@ -25,7 +25,7 @@ We adopt one A100 (80G) for training.
 1. Prepare your dataset and convert the nii.gz image into png format. Save the names in the list file in `/list` folder.
 2. Run this command to train KiTS-SAM-Adapter.
 ```bash
-python train.py --root_path <Your folder> --output <Your output path> --warmup --AdamW --tf32 --compile --use_amp --lr_exp 7 --max_epochs 400 --stop_epoch 300
+python train.py --root_path <Your folder> --output <Your output path> --warmup --AdamW --tf32 --compile --use_amp --lr_exp 0.99 --max_epochs 400 --stop_epoch 300
 ```
 Check the results in `<Your output path>`, and the training process will consume about 70G GPU memory.
 
@@ -33,7 +33,8 @@ Check the results in `<Your output path>`, and the training process will consume
 1.Prepare your dataset into .h5 format, and save the names in the list file in `./list` folder. Make sure you have the LoRA checkpoint and SAM's checkpoint(vit_h version)'
 2.Run this command to test KiTS-SAM-Adapter.
 ```bash
-python test.py --root_path <Your folder> --output_dir <Your output path> --is_savenii --ckpt <SAM's checkpoint> --lora_ckpt <LoRA checkpoint>
+python test.py --root_path <Your folder> --output_dir <Your output path> --is_savenii --ckpt <SAM checkpoint> --lora_ckpt <LoRA checkpoint>
 ```
 Check the results in `<Your output path>`.
-The test procedure doesn't require much memory space, you can run it on a graphics card with less memory
+
+The testing procedure doesn't require too much memory space, you can run it on a GPU with less memory.
